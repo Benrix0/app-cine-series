@@ -7,7 +7,7 @@ require('dotenv').config()
 
 const app = express();
 
-mongoose.connect(`mongodb+srv://Benrix0:${process.env.PSWDMONGODB}@cluster0-pme76.mongodb.net/test?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://Benrix0:${process.env.PSWDMONGODB}@cluster0.kx2wg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
