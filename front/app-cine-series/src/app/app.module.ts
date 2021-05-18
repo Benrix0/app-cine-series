@@ -8,6 +8,7 @@ import { SeeContentComponent } from './see-content/see-content.component';
 import { SeeContentItemComponent } from './see-content-item/see-content-item.component';
 import { SeeContentItemPageComponent } from './see-content-item-page/see-content-item-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     SeeContentComponent,
     SeeContentItemComponent,
     SeeContentItemPageComponent,
-    MainPageComponent
+    MainPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
