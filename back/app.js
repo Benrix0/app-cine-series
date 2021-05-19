@@ -24,16 +24,23 @@ app.post('/add-content', (req, res) => {
     content.save()
         .then(() => res.status(201).json({ message: 'Content registered'}))
         .catch(error => res.status(400).json({ error }));
-})
+});
+
+app.put('/edit-content', (req, res) => {
+    req.query['platforms'] = (req.query['platforms']).split(', ')
+    Content.updateOne({ _id: req.query['id']}, { ...req.query })
+        .then(content => res.status(200).json(content))
+        .catch(error => res.status(400).json({ error }))
+});
 
 app.get('/get-content', (req, res) => {
     Content.find()
         .then(content => {
-            res.status(200).json(content)
+            res.status(200).json(content);
         })
         .catch(error => {
             res.status(400).json({ error })
         })
-})
+});
 
 module.exports = app;
