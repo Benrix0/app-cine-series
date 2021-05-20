@@ -9,6 +9,8 @@ import { SeeContentItemComponent } from './see-content-item/see-content-item.com
 import { SeeContentItemPageComponent } from './see-content-item-page/see-content-item-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { AddPresentationComponent } from './add-presentation/add-presentation.component';
+import { SeePresentationComponent } from './see-presentation/see-presentation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     SeeContentItemComponent,
     SeeContentItemPageComponent,
     MainPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddPresentationComponent,
+    SeePresentationComponent
   ],
   imports: [
     BrowserModule,
