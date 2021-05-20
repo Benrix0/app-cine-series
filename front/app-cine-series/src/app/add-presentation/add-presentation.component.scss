@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    grid-template-columns: 47.5vw 47.5vw;
+    grid-template-rows: 1vh;
+    column-gap: 5vw;
+}
+
+.text {
+    background-color: black;
+}
+
+.link {
+    background-color: yellowgreen;
+}
