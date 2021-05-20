@@ -15,6 +15,7 @@ mongoose.connect(`mongodb+srv://Benrix0:${process.env.PSWDMONGODB}@cluster0.kx2w
     .then(() => console.log('Connexion à MongoDB réussie !'))
     .catch(() => console.log('Connexion à MongoDB échouée !'));
 
+;
 
 app.post('/add-content', (req, res) => {
     const content = new Content({

@@ -1,14 +1,31 @@
 .container {
     display: grid;
-    grid-template-columns: 47.5vw 47.5vw;
-    grid-template-rows: 1vh;
+    grid-template-columns: 47vw 47vw;
+    grid-template-rows: 70vh;
     column-gap: 5vw;
 }
 
 .text {
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding-left: 20%;
+    padding-right: 10%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .link {
-    background-color: yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.link a {
+    
+}
+
+.text, .link {
+    height: 100%;
 }
