@@ -7,3 +7,10 @@
     height: 100px;
     background-color: whitesmoke;
 }
+
+@media screen and (max-width: 1000px) {
+    .container {
+        bottom: 0;
+        top: auto;
+    }
+}
