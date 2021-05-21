@@ -1,9 +1,13 @@
 <div class="container">
-    <div class="primary-links">
-        <a routerLink="/" [replaceUrl]="true">Ciné-séries</a>
+    <div class="main-link">
+        <a routerLink="/" [replaceUrl]="true">
+            <h1>Ciné<br>Séries</h1>
+        </a>
     </div>
-    <div class="secondary-links">
-        <a routerLink="/see-content">Trouver un film ou une série</a>
-        <a routerLink="/add-content">Ajouter un film ou une série</a>
-    </div>
+    <a routerLink="/see-content" class="see-link">
+        <div class="see-link">Trouver un film ou une série</div>
+    </a>
+    <a routerLink="/add-content" class="add-link">
+        <div class="add-link">Ajouter un film ou une série</div>
+    </a>
 </div>
