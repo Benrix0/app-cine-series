@@ -13,9 +13,6 @@
     grid-column: 3;
     height: 10vh;
     background-color: orange;
-}
-
-.see-link a {
     display: flex;
     align-items: center;
 }
@@ -24,6 +21,8 @@
     grid-column: 4;
     height: 10vh;
     background-color: green;
+    display: flex;
+    align-items: center;
 }
 
 .main-link {
