@@ -19,13 +19,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: blue;
 }
 
-.link a {
+a {
     text-decoration: none;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    height: 10vh;
+    width: 300px;
+    font-size: 17px;
+    transition: 1.5s ease-out;
+}
+
+.link-container:hover {
+    height: 900px;
+    width: 22.5vw;
+    font-size: 25.5px;
 }
 
 .text, .link {
     height: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 47vw 47vw;
+        row-gap: 8vw;
+    }
+    .link {
+        grid-row: 2;
+    }
+    .text {
+        grid-row: 1;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        font-size: 10px;
+    }
 }
