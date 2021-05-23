@@ -1,1 +1,6 @@
-<p>see-content works!</p>
+<div class="container">
+    <app-see-content-item *ngFor="let item of contentArray"
+                            [title]="item.title"
+                            [description]="item.description"
+                            [platforms]="item.platforms"></app-see-content-item>
+</div>
