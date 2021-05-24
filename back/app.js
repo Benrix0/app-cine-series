@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const Content = require('./models/content');
+const Platform = require('./models/platforms');
 
 require('dotenv').config();
 
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 });
 
 app.post('/add-content', (req, res) => {
+    req.query['platforms'] = (req.query['platforms']).split(', ')
     const content = new Content({
         ...req.query
     });
@@ -62,5 +64,22 @@ app.get('/get-content', (req, res) => {
             .catch(error => res.status(400).json({ error }));
     }
 });
+
+app.post('/edit-platforms', (req, res) => {
+    req.query['platforms'] = (req.query['platforms']).split(', ');
+    Platform.updateOne({ _id: '60ab8aca02498133f4f6925b'}, {...req.query})
+        .then((platforms) => {
+            res.status(200).json(platforms);
+        })
+        .catch((err) => {
+            res.status(400).json({ error })
+        });
+})
+
+app.get('/get-platforms', (req, res) => {
+    Platform.findOne({ _id: '60ab8aca02498133f4f6925b'})
+        .then(platforms => res.status(200).json(platforms['platforms']))
+        .catch(err => res.status(400).json({ err }));
+})
 
 module.exports = app;

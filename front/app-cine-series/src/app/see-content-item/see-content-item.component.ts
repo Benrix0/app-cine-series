@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-see-content-item',
@@ -8,9 +7,9 @@ import { Subscription } from 'rxjs';
 })
 export class SeeContentItemComponent implements OnInit {
 
-  @Input() title!: String;
+  @Input() title!: string;
   @Input() description!: string;
-  @Input() platforms!: Array<String>;
+  @Input() platforms!: Array<string>;
 
   constructor() { }
 

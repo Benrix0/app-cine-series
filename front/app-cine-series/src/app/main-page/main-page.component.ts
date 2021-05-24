@@ -13,7 +13,6 @@ export class MainPageComponent implements OnInit {
               private contentService: ContentServiceService) { }
 
   ngOnInit(): void {
-    this.contentService.setContent();
     console.log(this.titleService.getTitle());
     this.titleService.setTitle('Ciné séries');
   }

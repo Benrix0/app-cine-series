@@ -1,23 +1,33 @@
 <div class="form-container">
-    <form>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
         <div class="form-group">
-            <label for="title">Titre: </label>
+            <label for="title" class="form-label">Titre: </label>
             <br>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" ngModel>
         </div>
         <div class="form-group">
-            <label for="description">Description: </label>
+            <label for="description" class="form-label">Description: </label>
             <br>
-            <textarea name="description" id="description" cols="10" rows="5"></textarea>
+            <textarea name="description" id="description" cols="10" rows="5" ngModel></textarea>
         </div>
         <div class="form-group">
-            <label for="images">URL des images: </label>
+            <label for="images" class="form-label">URL des images: </label>
             <br>
-
+            <div class="images" *ngFor="let image of images">
+                <input type="text" [name]="image" [id]="image" ngModel>
+                <button type="button" (click)="onAddLink()">Ajouter le lien</button>
+            </div>
         </div>
         <div class="form-group">
-            <label for="platforms">Plateformes: </label>
+            <label for="platforms" class="form-label">Plateformes: </label>
             <br>
+            <div class="platforms">
+                <div *ngFor="let platform of platforms" class="platformSelection">
+                    <input type="checkbox" [name]="platform" [id]="platform" ngModel>
+                    <label [for]="platform" class="platform-label">{{ platform }}</label>
+                </div>
+            </div>
         </div>
+        <button type="submit">Enregistrer</button>
     </form>
 </div>

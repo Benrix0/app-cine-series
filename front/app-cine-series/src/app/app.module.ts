@@ -12,6 +12,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AddPresentationComponent } from './add-presentation/add-presentation.component';
 import { SeePresentationComponent } from './see-presentation/see-presentation.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SeePresentationComponent } from './see-presentation/see-presentation.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

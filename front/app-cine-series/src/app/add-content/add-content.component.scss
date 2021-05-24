@@ -1,13 +1,20 @@
 .form-container {
     margin: 0 auto;
     width: fit-content;
+    margin-top: 15vh;
 }
 
 .form-group {
     text-align: center;
 }
 
-.form-group label {
+.platform-label {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.form-label {
     font-family: 'Roboto', sans-serif;
     color: black;
     font-size: 30px;
