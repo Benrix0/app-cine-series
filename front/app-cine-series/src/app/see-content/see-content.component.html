@@ -1,4 +1,7 @@
 <div class="container">
+    <div class="spinner-container">
+        <mat-progress-spinner *ngIf="!find" mode="indeterminate"></mat-progress-spinner>
+    </div>
     <app-see-content-item *ngFor="let item of contentArray"
                             [title]="item.title"
                             [description]="item.description"

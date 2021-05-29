@@ -6,7 +6,7 @@ const contentSchema = mongoose.Schema({
     platforms: {type: 'array', required: true},
     images: {type: 'array', required: true},
     isSerie: {type: 'bool', required: true},
-    saisons: {type: 'array', required: false},
+    episodes: {type: 'array', required: false},
     time: {type: 'string', required: false}
 });
 

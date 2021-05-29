@@ -32,7 +32,7 @@ app.post('/add-content', (req, res) => {
     });
 
     content.save()
-        .then(() => res.status(201).json({ message: 'Content registered' }))
+        .then((content) => res.status(201).json({ id: content['_id']}))
         .catch(error => res.status(400).json({ error }));
 });
 

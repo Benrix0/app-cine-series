@@ -1,32 +1,45 @@
 <div class="form-container">
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <form [formGroup]="contentForm" (ngSubmit)="onSubmitForm()">
         <div class="form-group">
             <label for="title" class="form-label">Titre: </label>
             <br>
-            <input type="text" name="title" id="title" ngModel>
+            <input type="text" name="title" id="title" formControlName="title">
         </div>
         <div class="form-group">
             <label for="description" class="form-label">Description: </label>
             <br>
-            <textarea name="description" id="description" cols="10" rows="5" ngModel></textarea>
+            <textarea name="description" id="description" cols="10" rows="5" formControlName="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="isSerie" class="form-label">Type de contenu: </label>
+            <br>
+            <mat-select (selectionChange)="onSelectType(selectType.value)" #selectType>
+                <mat-option [value]="true">Série</mat-option>
+                <mat-option [value]="false">Film</mat-option>
+            </mat-select>
         </div>
         <div class="form-group">
             <label for="images" class="form-label">URL des images: </label>
             <br>
-            <div class="images" *ngFor="let image of images">
-                <input type="text" [name]="image" [id]="image" ngModel>
-                <button type="button" (click)="onAddLink()">Ajouter le lien</button>
+            <div class="images">
+                <input type="text">
+                <button type="button">Ajouter le lien</button>
             </div>
         </div>
         <div class="form-group">
             <label for="platforms" class="form-label">Plateformes: </label>
             <br>
-            <div class="platforms">
-                <div *ngFor="let platform of platforms" class="platformSelection">
-                    <input type="checkbox" [name]="platform" [id]="platform" ngModel>
-                    <label [for]="platform" class="platform-label">{{ platform }}</label>
-                </div>
-            </div>
+            <mat-select multiple (selectionChange)="onSelectPlatform(selectPlatform.value)" #selectPlatform>
+                <mat-option *ngFor="let platform of platforms" [value]="platform">{{ platform }}</mat-option>
+            </mat-select>
+        </div>
+        <div class="form-group" *ngIf="isSerie">
+            <label for="episodes" class="form-label">Episodes: </label>
+            <br>
+        </div>
+        <div class="form-group" *ngIf="!isSerie">
+            <label for="duration" class="form-label">Durée: </label>
+            <br>
         </div>
         <button type="submit">Enregistrer</button>
     </form>

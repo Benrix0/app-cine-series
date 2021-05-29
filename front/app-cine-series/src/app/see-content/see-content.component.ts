@@ -12,6 +12,7 @@ export class SeeContentComponent implements OnInit, OnDestroy {
 
   contentSubscription!: Subscription;
   contentArray!: Array<any>;
+  find: boolean = false;
 
   constructor(private titleService: Title,
     private contentService: ContentServiceService) { }
@@ -19,7 +20,10 @@ export class SeeContentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.titleService.setTitle('Trouver un film ou une série');
     this.contentSubscription = this.contentService.getContent().subscribe(
-      content => { this.contentArray = content}
+      content => {
+        this.contentArray = content;
+        this.find = true;
+      }
     )
   }
 

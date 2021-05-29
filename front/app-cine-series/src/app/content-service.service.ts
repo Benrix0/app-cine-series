@@ -29,7 +29,7 @@ export class ContentServiceService {
   sendContent(content: Content) {
     let url: string;
     if (content.isSerie) {
-      url = `${this.baseURL}/add-content?title=${content.title}&description=${content.description}&platforms=${content.platforms}&image=${content.images}&saisons=${content.saisons}`
+      url = `${this.baseURL}/add-content?title=${content.title}&description=${content.description}&platforms=${content.platforms}&image=${content.images}&saisons=${content.episodes}`
     } else {
       url = `${this.baseURL}/add-content?title=${content.title}&description=${content.description}&platforms=${content.platforms}&image=${content.images}&time=${content.time}`;
     }
