@@ -9,7 +9,7 @@ import { Content } from './models/content.model';
 
 export class ContentServiceService {
 
-  baseURL: string = 'http://localhost:3000';
+  baseURL: string = 'https://app-cine-series-back.herokuapp.com';
   content: any[] = [];
 
   constructor(private http: HttpClient) { }
