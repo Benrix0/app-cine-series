@@ -1,6 +1,6 @@
 {
-    "version": 2,
-    "name": "nodejs-mysql",
+    "version": 1,
+    "name": "app-cine-series-back",
     "builds": [
       { "src": "server.js", "use": "@vercel/node" }
     ],
