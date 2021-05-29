@@ -1,0 +1,11 @@
+---
+application:
+  name: "app-cine-series"
+  project: "cine-series"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-app-cine-series"
+  routes:
+  - application_name: "app-cine-series"
+    paths:
+    - "/*"
